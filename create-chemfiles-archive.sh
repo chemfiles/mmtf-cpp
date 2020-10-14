@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 set -xeu
+git submodule update --init
 
 git archive HEAD -9 --prefix=mmtf-cpp/ -o mmtf-cpp.tar.gz
 tar xf mmtf-cpp.tar.gz
