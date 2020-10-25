@@ -5,7 +5,8 @@ git submodule update --init
 
 git archive HEAD -9 --prefix=mmtf-cpp/ -o mmtf-cpp.tar.gz
 tar xf mmtf-cpp.tar.gz
-cp -r msgpack-c/include mmtf-cpp/msgpack-c/
+mkdir -p mmtf-cpp/msgpack-c/
+cp -r submodules/msgpack-c/include mmtf-cpp/msgpack-c/include
 rm -rf mmtf-cpp.tar.gz
 tar cf mmtf-cpp.tar mmtf-cpp
 rm -rf mmtf-cpp
